@@ -15,9 +15,11 @@
         text-align: center;
     }
     &__img {
-        width: calc(100% + 40px);
+        min-width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
         transform: translateX(-20px);
-        height: 240px;
+        min-height: 240px;
+        max-height: 240px;
         object-fit: cover;
         margin-bottom: 20px;
     }
