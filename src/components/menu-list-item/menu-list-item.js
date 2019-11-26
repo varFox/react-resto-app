@@ -4,7 +4,7 @@ import Meet from './meet.png';
 import Salad from './salad.jpg';
 import Pizza from './pizza.png';
 
-const MenuListItem = ({menuItem}) => {
+const MenuListItem = ({menuItem, onAddToCard}) => {
 	const {title, price, url, category} = menuItem;
 	let img = new Image();
 	img.src = url;
@@ -17,7 +17,7 @@ const MenuListItem = ({menuItem}) => {
 
 			<div className="menu__category">Category: <span>{category}</span></div>
 			<div className="menu__price">Price: <span>{price}$</span></div>
-			<button className="menu__btn">Add to cart</button>
+			<button onClick={() => onAddToCard()} className="menu__btn">Add to cart</button>
 		</li>
 	)
 }

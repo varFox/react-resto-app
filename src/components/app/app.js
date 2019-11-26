@@ -3,12 +3,14 @@ import {MainPage, CartPage} from '../pages';
 import AppHeader from '../app-header';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Background from './food-bg.jpg';
+// import {initialState} from './../../reducers'
 
 const App = () => {
+
 	return (
 		<Router>
 			<div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
-				<AppHeader total={50}/>
+				<AppHeader/>
 				<Switch>
 				<Route exact path='/' component={MainPage}/>
 					<Route path='/menu' component={MainPage}/>
